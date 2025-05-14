@@ -78,8 +78,11 @@ const App = () => {
       .create(newPerson)
       .then((returnedPerson) => {
         setPersons(persons.concat(returnedPerson))
+        handleNotification(`Added ${newPerson.name}`)
       })
-      handleNotification(`Added ${newPerson.name}`)
+      .catch(error => {
+        handleError(error.response.data.error.message)
+      })
   }}
 
 
