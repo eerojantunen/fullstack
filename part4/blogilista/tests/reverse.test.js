@@ -203,3 +203,13 @@ describe("Most likes", () => {
       assert(authors.includes(bestAuthor))
     })
 })
+
+describe("Creating user", () => {
+
+  test("User can be added with correct parameters", () => {
+    const username = "newUserName"
+    const name = "myName"
+    const password = "5tr0ngP455w0rd412"
+    
+  })
+})
